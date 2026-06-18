@@ -124,7 +124,12 @@ if "colores" not in st.session_state:
     st.session_state["colores"] = {}
 
 def obtener_color(asignatura, grupo):
+
+    if "colores" not in st.session_state:
+        st.session_state["colores"] = {}
+        
     key = f"{asignatura}-{grupo}"
+    
 
     if key not in st.session_state["colores"]:
         st.session_state["colores"][key] = RCH.main(how_different_should_colors_be='l') #l = very different, python library. 
