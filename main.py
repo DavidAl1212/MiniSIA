@@ -7,6 +7,9 @@ from data import *
 # ── Configuración ─────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Micro-SIA", layout="wide")
 
+if "colores" not in st.session_state:
+    st.session_state["colores"] = {}
+
 # ── Constantes de días ────────────────────────────────────────────────────────
 DIAS = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
 
